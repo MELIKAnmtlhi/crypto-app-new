@@ -37,8 +37,8 @@ function HomePage() {
       <Pagination page={page} setPage={setPage} />
       {!!chart && <Chart chart={chart} setChart={setChart}/>}
     </div>
-  )  
-};
+  );
+}
 
 export default HomePage;
     

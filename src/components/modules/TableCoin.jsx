@@ -55,8 +55,8 @@ const TableRow = ({coin, setChart }) =>  {
           setChart({...json, coin:coin})
         } catch (error) {
           setChart(null)
-        };
-      }
+        }
+      };
 
   return (
           <tr>
@@ -67,9 +67,9 @@ const TableRow = ({coin, setChart }) =>  {
                 </div>
               </td>
               <td>{name}</td>
-              <td>${current_price.toLocaleString()}</td>
-              <td className={price_change > 0 ? styles.success : styles.error}>{price_change.toFixed(2)}%</td>
-              <td>{total_volume.toLocaleString()}</td>
+              <td>${current_price?.toLocaleString() ?? "-"}</td>
+              <td className={price_change > 0 ? styles.success : styles.error}>{price_change?.toFixed(2) ?? "-"}%</td>
+              <td>{total_volume?.toLocaleString() ?? "-"}</td>
               <td>
                 <img src={price_change > 0 ? chartUp : chartDown} alt={name} />
               </td>

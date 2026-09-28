@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import  { useState, useEffect } from "react";
 import { RotatingLines } from "react-loader-spinner";
 
 import { searchCoin } from "../../services/crypto";
@@ -49,7 +49,7 @@ function Search({currency, setCurrency}) {
           <option value="eur">EUR</option>
           <option value="jpy">JPY</option>
         </select>
-        {(!!coins.lenght || isLoading) && (
+        {(!!coins.length || isLoading) && (
          <div className={styles.searchResult}>
           {isLoading && <RotatingLines width="50px" height="50px" strokeWidth="2" strokeColor="#3874ff"/>}
           <ul>
